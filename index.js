@@ -6,6 +6,8 @@ const cartEl =document.getElementById("Cart");
 const modal_container= document.getElementById("modal-container");
 const close= document.getElementById("continue-shopping");
 
+const cartItemsEl1= document.querySelector(".cart-table");
+
 let slideIndex = 0;
 showSlides();
 
@@ -94,7 +96,8 @@ function renderCartItems(){
 
       totalItemsEl.innerHTML=totalItems;
 
-        cartItemsEl.innerHTML += `
+      cartItemsEl.innerHTML += `
+        
                 <div class="cart-item">
                     <div class="item-info">
                         <img src="${item.imgSrc}" alt="Double size bed">
@@ -120,6 +123,16 @@ function renderCartItems(){
                     </div>
                 </div>
         `;
+      cartItemsEl1.innerHTML += `
+          <tr>
+            <td><h4>${item.name}</h4></td>
+            <td>$${item.price}</td>
+            <td>${item.numberOfUnits}</td>
+            <td>$${subTotal.toFixed(2)}</td>
+            <td>$${discount.toFixed(2)}</td>
+            <td>$${totalPrice.toFixed(2)}</td>
+          </tr>
+      `
       grandTotal+=subTotal;
       totalDiscount+=discount;
       payableAmount+=totalPrice;
