@@ -170,7 +170,6 @@ function changeNumberOfUnits(action, id){
 
 function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
-
   updateCart();
 }
 

@@ -123,6 +123,7 @@ nav a{
     align-items: center;
     height: auto;
     margin: 10px ;
+    border-radius: 10px;
 }
 .card button{
     margin-bottom: 30px;
@@ -134,7 +135,7 @@ nav a{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    
+    border-radius: 15px;
 }
 .card p{
   font-size: 30px;
